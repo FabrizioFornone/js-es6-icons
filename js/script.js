@@ -123,8 +123,12 @@ const hookHtml = document.querySelector(".hook");
 
 // funzione createCard
 function createCard(object) {
-  return `<div class="box d-flex flex-column align-items-center p-4 rounded bg-light">
-    <i class="py-2 ${object.family} ${object.prefix}${object.name} ${object.color}"></i>
+  return `<div class="box text-center  p-4 rounded bg-light">
+        <div>
+          <i
+            class="py-2 ${object.family} ${object.prefix}${object.name} ${object.color}"
+          ></i>
+        </div>
     <h4 class="py-2"> ${object.name} </h4>
   </div>`;
 }
