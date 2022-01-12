@@ -1,5 +1,6 @@
 body {
   background-color: whitesmoke;
+  font-family: "Kanit", sans-serif;
 }
 
 header {
@@ -15,9 +16,15 @@ main .hook {
 }
 
 .box {
-  width: calc(100% / 4 - 20px);
-  margin: 10px 10px;
+  width: calc(100% / 4 - 100px);
+  margin: 10px 50px;
 }
+
+.box:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 .blue {
   color: blue;
 }
