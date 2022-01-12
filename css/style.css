@@ -23,6 +23,11 @@ main .hook {
 .box:hover {
   transform: scale(1.1);
   cursor: pointer;
+  color: #778899;
+}
+
+select {
+  cursor: pointer;
 }
 
 .blue {
