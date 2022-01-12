@@ -1,6 +1,10 @@
+body {
+  background-color: whitesmoke;
+}
+
 .box {
-    width: calc(100% / 4 - 20px);
-    margin: 10px 10px;
+  width: calc(100% / 4 - 20px);
+  margin: 10px 10px;
 }
 .blue {
   color: blue;
@@ -14,5 +18,5 @@
 }
 
 i {
-    font-size: 35px;
+  font-size: 35px;
 }
