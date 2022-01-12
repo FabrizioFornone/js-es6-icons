@@ -133,7 +133,7 @@ function createCard(object) {
     class="py-2 ${object.family} ${object.prefix}${object.name} ${object.color}"
     ></i>
     </div>
-    <h4 class="py-2"> ${object.name} </h4>
+    <h4 class="py-2"> ${object.name.toUpperCase()} </h4>
     </div>`;
 }
 
