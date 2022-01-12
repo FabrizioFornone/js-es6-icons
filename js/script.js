@@ -118,8 +118,10 @@ const listIcons = [
   },
 ];
 
+// aggancio con il dom
 const hookHtml = document.querySelector(".hook");
 
+// funzione createCard
 function createCard(object) {
   return `<div class="box d-flex flex-column align-items-center p-4 rounded bg-light">
     <i class="py-2 ${object.family} ${object.prefix}${object.name} ${object.color}"></i>
@@ -127,6 +129,7 @@ function createCard(object) {
   </div>`;
 }
 
+//for each per stampare tutte le card
 listIcons.forEach((element) => {
   hookHtml.innerHTML += createCard(element);
 });
