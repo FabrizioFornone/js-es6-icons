@@ -147,61 +147,23 @@ Aggiungere alla pagina una select in cui le options corrispondono ai vari tipi d
  (animal, vegetable, user). Quando l’utente seleziona un tipo dalla select, visualizzare
   solamente le icone corrispondenti. */
 
-//utilizzo filter per creare 4 Array diversi contenenti i 4 type
-
-const allList = listIcons.filter(function (element) {
-  return (allTypes = element.type);
-});
-
-console.log(allList);
-
-const animalsList = listIcons.filter(function (element) {
-  const animalType = element.type;
-  return animalType === "animal";
-});
-
-console.log(animalsList);
-
-const vegetableList = listIcons.filter(function (element) {
-  const vegetableType = element.type;
-  return vegetableType === "vegetable";
-});
-
-console.log(vegetableList);
-
-const usersList = listIcons.filter(function (element) {
-  const usersType = element.type;
-  return usersType === "user";
-});
-
-console.log(usersList);
-
 //collego il tag select con JS
 
 const selectElement = document.getElementById("select-js");
 
-// stampa a seconda della selezione l'array corretto
-
+// addEventlistener dal select
 selectElement.addEventListener("change", (event) => {
-  if (selectElement.value === "All") {
-    hookHtml.innerHTML = "";
-    allList.forEach((element) => {
-        hookHtml.innerHTML += createCard(element);
-      });
-  } else if(selectElement.value === "Animals") {
-    hookHtml.innerHTML = "";
-    animalsList.forEach((element) => {
-        hookHtml.innerHTML += createCard(element);
-      });
-  } else if(selectElement.value === "Vegetables") {
-    hookHtml.innerHTML = "";
-    vegetableList.forEach((element) => {
-        hookHtml.innerHTML += createCard(element);
-      });
-  } else  {
-    hookHtml.innerHTML = "";
-    usersList.forEach((element) => {
-        hookHtml.innerHTML += createCard(element);
-      });
-  }
+  // creo una variabile corrispondente al value dell'option cliccata
+  let optionValue = event.target.value;
+  /* creo un array con filter composto dinamicamente dagli oggetti che hanno
+  come type lo stesso value dell'option selezionata */
+  let filterArray = listIcons.filter((element) => {
+    return element.type === optionValue || optionValue === "all";
+  });
+  // pulisco l'HTML
+  hookHtml.innerHTML = "";
+  // stampo l'array con filter selezionato
+  filterArray.forEach((element) => {
+    hookHtml.innerHTML += createCard(element);
+  });
 });
