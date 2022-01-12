@@ -147,7 +147,13 @@ Aggiungere alla pagina una select in cui le options corrispondono ai vari tipi d
  (animal, vegetable, user). Quando l’utente seleziona un tipo dalla select, visualizzare
   solamente le icone corrispondenti. */
 
-//utilizzo filter per creare 3 Array diversi contenenti i 3 type
+//utilizzo filter per creare 4 Array diversi contenenti i 4 type
+
+const allList = listIcons.filter(function (element) {
+  return (allTypes = element.type);
+});
+
+console.log(allList);
 
 const animalsList = listIcons.filter(function (element) {
   const animalType = element.type;
@@ -170,6 +176,8 @@ const usersList = listIcons.filter(function (element) {
 
 console.log(usersList);
 
-//collego il tag select con il DOM
+//collego il tag select con JS
 
 const selectElement = document.getElementById("select-js");
+
+selectElement.addEventListener("change", (event) => {});
