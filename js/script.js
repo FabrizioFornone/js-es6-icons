@@ -180,4 +180,26 @@ console.log(usersList);
 
 const selectElement = document.getElementById("select-js");
 
-selectElement.addEventListener("change", (event) => {});
+selectElement.addEventListener("change", (event) => {
+  if (selectElement.value === "All") {
+    hookHtml.innerHTML = "";
+    allList.forEach((element) => {
+        hookHtml.innerHTML += createCard(element);
+      });
+  } else if(selectElement.value === "Animals") {
+    hookHtml.innerHTML = "";
+    animalsList.forEach((element) => {
+        hookHtml.innerHTML += createCard(element);
+      });
+  } else if(selectElement.value === "Vegetables") {
+    hookHtml.innerHTML = "";
+    vegetableList.forEach((element) => {
+        hookHtml.innerHTML += createCard(element);
+      });
+  } else  {
+    hookHtml.innerHTML = "";
+    usersList.forEach((element) => {
+        hookHtml.innerHTML += createCard(element);
+      });
+  }
+});
