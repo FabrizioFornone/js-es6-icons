@@ -180,6 +180,8 @@ console.log(usersList);
 
 const selectElement = document.getElementById("select-js");
 
+// stampa a seconda della selezione l'array corretto
+
 selectElement.addEventListener("change", (event) => {
   if (selectElement.value === "All") {
     hookHtml.innerHTML = "";
