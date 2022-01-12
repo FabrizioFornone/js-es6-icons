@@ -2,6 +2,18 @@ body {
   background-color: whitesmoke;
 }
 
+header {
+    height: 50px;
+}
+
+nav {
+    height: 50px;
+}
+
+main .hook {
+    height: calc(100vh - 100px );
+}
+
 .box {
   width: calc(100% / 4 - 20px);
   margin: 10px 10px;

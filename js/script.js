@@ -1,7 +1,11 @@
 /* Milestone 1
 Partendo dalla struttura dati fornita, visualizzare in pagina
- un box per ogni icona, in cui è presente
- il nome dell’icona e l’icona stessa. (for each) */
+un box per ogni icona, in cui è presente
+il nome dell’icona e l’icona stessa. (for each) */
+
+/* Milestone 2
+Ciascuna icona ha una proprietà “color”: utilizzare questa
+ proprietà per visualizzare le icone del colore corrispondente. */
 
 const listIcons = [
   {
@@ -123,17 +127,24 @@ const hookHtml = document.querySelector(".hook");
 
 // funzione createCard
 function createCard(object) {
-  return `<div class="box text-center shadow  p-4 rounded bg-light">
-        <div>
-          <i
-            class="py-2 ${object.family} ${object.prefix}${object.name} ${object.color}"
-          ></i>
-        </div>
+  return `<div class="box text-center shadow  p-3 rounded bg-light">
+    <div>
+    <i
+    class="py-2 ${object.family} ${object.prefix}${object.name} ${object.color}"
+    ></i>
+    </div>
     <h4 class="py-2"> ${object.name} </h4>
-  </div>`;
+    </div>`;
 }
 
 //for each per stampare tutte le card
 listIcons.forEach((element) => {
   hookHtml.innerHTML += createCard(element);
 });
+
+/* Milestone 3
+Aggiungere alla pagina una select in cui le options corrispondono ai vari tipi di icone
+ (animal, vegetable, user). Quando l’utente seleziona un tipo dalla select, visualizzare
+  solamente le icone corrispondenti. */
+
+
