@@ -152,9 +152,9 @@ Aggiungere alla pagina una select in cui le options corrispondono ai vari tipi d
 const selectElement = document.getElementById("select-js");
 
 // addEventlistener dal select
-selectElement.addEventListener("change", (event) => {
+selectElement.addEventListener("change", function () {
   // creo una variabile corrispondente al value dell'option cliccata
-  let optionValue = event.target.value;
+  let optionValue = this.value;
   /* creo un array con filter composto dinamicamente dagli oggetti che hanno
   come type lo stesso value dell'option selezionata */
   let filterArray = listIcons.filter((element) => {
