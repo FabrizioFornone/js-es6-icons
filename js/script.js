@@ -153,12 +153,10 @@ const selectElement = document.getElementById("select-js");
 
 // addEventlistener dal select
 selectElement.addEventListener("change", function () {
-  // creo una variabile corrispondente al value dell'option cliccata
-  let optionValue = this.value;
   /* creo un array con filter composto dinamicamente dagli oggetti che hanno
   come type lo stesso value dell'option selezionata */
   let filterArray = listIcons.filter((element) => {
-    return element.type === optionValue || optionValue === "all";
+    return this.value === element.type || this.value === "all";
   });
   // pulisco l'HTML
   hookHtml.innerHTML = "";
